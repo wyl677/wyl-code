@@ -6,7 +6,7 @@ import java.lang.annotation.*;
 @Target(ElementType.FIELD)
 @Inherited
 @Documented
-//
+//自定义注解
 public @interface Autowired {
 
 }
