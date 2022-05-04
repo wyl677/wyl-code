@@ -34,6 +34,15 @@ public class Consumer {
         CancelCallback cancelCallback = consumerTag->{
             System.out.println("消息消费被中断");
         };
+
+        /**
+         * 消费者消费消息
+         * 1.消费那个队列
+         * 2.消费成功后是否要自动应答 true自动应答   false手动应答
+         * 3.消费者未成功消费的回调
+         * 4.消费者取消消费的回调
+         */
+
         //消费者消费消息
         channel.basicConsume(QUEUE_NAME,true,deliverCallback,cancelCallback);
 
