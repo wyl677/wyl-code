@@ -2,15 +2,32 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="mybatis" />
         <module name="rabbitmq-hello" />
+        <module name="mybatis-generator6" />
+        <module name="springboot-helloword" />
+        <module name="docker_boot" />
+        <module name="ssm-crud" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="docker_boot" target="1.8" />
+      <module name="mybatis" target="1.8" />
+      <module name="mybatis-generator6" target="1.8" />
       <module name="rabbitmq-hello" target="1.8" />
+      <module name="springboot-helloword" target="1.8" />
+      <module name="ssm-crud" target="1.8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="docker_boot" options="-parameters" />
+      <module name="springboot-helloword" options="-parameters" />
+    </option>
   </component>
 </project>
