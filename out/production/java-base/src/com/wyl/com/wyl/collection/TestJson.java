@@ -46,11 +46,11 @@ public class TestJson {
 
         JSONObject jsonObject = JSON.parseObject(str);
         System.out.println(jsonObject);
-        jsonObject.remove("aaa");
+        jsonObject.remove("arr");
         System.out.println(jsonObject);
-//        jsonObject.remove("businfo");
-//        jsonObject.remove("treess");
-//        System.out.println(jsonObject);
+        jsonObject.remove("businfo");
+        jsonObject.remove("treess");
+        System.out.println(jsonObject);
 
     }
 }
