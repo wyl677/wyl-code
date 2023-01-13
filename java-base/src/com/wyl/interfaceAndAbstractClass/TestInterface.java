@@ -13,5 +13,6 @@ public interface TestInterface {
     //不能有方法体,不能有静态方法
     void test1();
     public void test2();
+    public abstract void test3();
 
 }
