@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person" class="com.wyl.bean.Person">
+        <!--基本数据类型-->
+        <!--<property name="age">
+            <value>18</value>
+        </property>-->
+        <!--简写-->
+        <property name="age" value="18"></property>
+        <property name="name">
+            <value>张三</value>
+        </property>
+
+        <!--数组-->
+        <property name="email">
+            <list>
+                <value>111@qq.com</value>
+                <value>222@qq.com</value>
+                <value>333@qq.com</value>
+            </list>
+        </property>
+
+        <!--Set集合-->
+        <property name="tels">
+            <set>
+                <value>111111</value>
+                <value>222222</value>
+                <value>333333</value>
+            </set>
+        </property>
+
+        <!--List集合-->
+        <property name="addr">
+            <list>
+                <value>中国</value>
+                <value>四川</value>
+                <value>成都</value>
+            </list>
+        </property>
+
+        <!--Map集合-->
+        <property name="qqs">
+            <map>
+                <entry>
+                    <key>
+                        <value>suns</value>
+                    </key>
+                    <value>111</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>aa</value>
+                    </key>
+                    <value>222</value>
+                </entry>
+            </map>
+        </property>
+
+        <!--Properties-->
+        <property name="p">
+            <props>
+                <prop key="key1">value1</prop>
+                <prop key="key2">value2</prop>
+            </props>
+        </property>
+
+        <!--引用数据类型-->
+        <!--<property name="son">
+            <ref bean="son"></ref>
+        </property>-->
+
+        <!--简写-->
+        <property name="son" ref="son"></property>
+    </bean>
+
+    <!--<bean id="son" class="com.wyl.bean.Son">
+        <property name="age" value="1"></property>
+        <property name="name" value="李四"></property>
+    </bean>-->
+
+    <!--简写 通过p命名空间-->
+    <bean id="son" class="com.wyl.bean.Son" p:age="1" p:name="李四"></bean>
+</beans>
