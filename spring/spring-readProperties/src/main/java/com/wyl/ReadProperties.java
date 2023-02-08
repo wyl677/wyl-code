@@ -1,8 +1,5 @@
 package com.wyl;
 
-import com.sun.xml.internal.ws.util.ReadAllStream;
-import org.junit.Test;
-
 import java.io.InputStream;
 import java.util.Properties;
 
