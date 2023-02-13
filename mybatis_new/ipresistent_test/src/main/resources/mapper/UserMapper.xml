@@ -1,0 +1,17 @@
+<mapper namespace="com.wyl.dao.IUserDao">
+
+<!--
+    规范：接口的全路径要和namespace的值保持一致
+         接口中的方法要和id的值保持一致
+-->
+    <!--查询所有-->
+    <select id="findAll" resultType="com.wyl.pojo.User">
+        select * from tb_user
+    </select>
+    <!--按条件进行查询-->
+    <select id="selectOne" resultType="com.wyl.pojo.User" parameterType="com.wyl.pojo.User">
+        select * from tb_user where id = #{id} and username = #{username}
+    </select>
+
+
+</mapper>

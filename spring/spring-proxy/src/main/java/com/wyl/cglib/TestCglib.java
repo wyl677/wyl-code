@@ -41,11 +41,13 @@ public class TestCglib {
              */
             @Override
             public Object intercept(Object o, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+                System.out.println("111:"+methodProxy.getSuperName());
                 System.out.println("--------cglib log-------------");
                 Object ret = method.invoke(userService, args);
                 return ret;
             }
         };
+
         enhancer.setCallback(interceptor);
         UserService userServiceProxy = (UserService) enhancer.create();
         userServiceProxy.login("wyl","123456");

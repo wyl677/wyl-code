@@ -11,6 +11,7 @@ import java.lang.reflect.Proxy;
 /**
  * @auther yanl.wang
  * @date 2023/2/9
+ * 通过接口创建代理类
  *
  * 代理创建3要素
  *    1。原始对象
