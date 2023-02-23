@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--1.基于schema-->
+    <context:component-scan base-package="com.wyl.four"></context:component-scan>
+    <bean id="account" class="com.wyl.four.Account"></bean>
+    <context:property-placeholder location="classpath:four.properties"></context:property-placeholder>
+
+    <!--2.基于特定功能注解-->
+    <!--    <context:component-scan base-package="com.wyl.four"></context:component-scan>-->
+
+    <!--3.基于原始bean-->
+    <!--<context:component-scan base-package="com.wyl.four"></context:component-scan>
+    <bean id="propertySourcesPlaceholderConfigurer"
+          class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
+        <property name="location" value="four.properties"></property>
+    </bean>-->
+
+</beans>
